@@ -1,7 +1,14 @@
 <h1>Curency Pairs</h1>
-<%=@quotes%>
 
+<ol>
+<% @currencies.each {|c| %>
+
+  <li>
+  <a href="/<%= c[0] %>"> Convert 1 <%=c[0]%> to...</a> </li>
+
+<% } %>
+</ol>
 
 <div>
 
-<%=@api_url%>
+

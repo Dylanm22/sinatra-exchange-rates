@@ -6,7 +6,7 @@ require "http"
 
 get("/") do
 
-  @api_url = "http://api.exchangerate.host/live?access_key=#{ENV["EXCHANGE_RATE_KEY"]}"
+  @api_url = "http://api.exchangerate.host/list?access_key=#{ENV["EXCHANGE_RATE_KEY"]}"
 
   raw_data= HTTP.get(@api_url)
 
@@ -16,11 +16,11 @@ get("/") do
 
 
   
-  @quotes = parsed_data.fetch("quotes")
+  @currencies = parsed_data.fetch("currencies")
 
 
 
-  @symbols
+  
 
 erb(:home_page)
 
