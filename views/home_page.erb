@@ -1,7 +1,7 @@
-<h1>Curency Pairs</h1>
+<h1>Curency pairs</h1>
 
 <ol>
-<% @currencies.each {|c| %>
+<% @symbols.each {|c| %>
 
   <li>
   <a href="/<%= c[0] %>"> Convert 1 <%=c[0]%> to...</a> </li>
@@ -10,5 +10,3 @@
 </ol>
 
 <div>
-
-

@@ -1,0 +1,10 @@
+<h1>Convert <%=@original_currency%></h1>
+<%=params%>
+<ol>
+<% @symbols.each {|c| %>
+
+  <li>
+  <a href="/<%=params.fetch("from_currency")%>/<%= c[0] %>"> Convert 1 <%=params.fetch("from_currency")%> to <%=c[0]%></a> </li>
+
+<% } %>
+</ol>
